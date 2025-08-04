@@ -71,10 +71,9 @@ class HashMap {
     const index = this.hash(key);
     this._checkBounds(index);
 
-    for (const entry of this.buckets[index]) {
-      if (entry[0] === key) {
-        let indexToRemove = this.buckets[index].indexOf(entry);
-        this.buckets[index].splice(indexToRemove, 1);
+    for (let i = 0; i < this.buckets[index].length; i++) {
+      if (this.buckets[index][i][0] === key) {
+        this.buckets[index].splice(i, 1);
         this.entries--;
         return true;
       }
