@@ -81,4 +81,37 @@ class HashMap {
 
     return false;
   }
+
+  length() {
+    return this.entries;
+  }
+
+  clear() {
+    this.buckets = new Array(this.capacity).fill(null).map(() => []);
+    this.entries = 0;
+  }
+
+  keys() {
+    const keysArray = [];
+
+    for (const bucket of this.buckets) {
+      for (const entry of bucket) {
+        keysArray.push(entry[0]);
+      }
+    }
+
+    return keysArray;
+  }
+
+  values() {
+    const valuesArray = [];
+
+    for (const bucket of this.buckets) {
+      for (const entry of bucket) {
+        valuesArray.push(entry[1]);
+      }
+    }
+
+    return valuesArray;
+  }
 }
