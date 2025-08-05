@@ -190,7 +190,6 @@ test.set("kite", "pink");
 test.set("lion", "golden");
 
 console.log(test.length());
-
 console.log(test);
 
 test.set("apple", "green");
@@ -198,9 +197,28 @@ test.set("grape", "green");
 test.set("ice cream", "chocolate");
 
 console.log(test.length());
+console.log(test);
 
 test.set("moon", "silver");
 
 console.log(test.length());
-
 console.log(test);
+
+test.set("apple", "red");
+test.set("grape", "purple");
+test.set("ice cream", "white");
+
+console.log(test.get("apple"));
+console.log(test.has("grape"));
+console.log(test.remove("dog"));
+
+console.log(test.length());
+console.log(test);
+
+// console.log(test.clear());
+// console.log(test.length());
+// console.log(test);
+
+console.log(test.keys());
+console.log(test.values());
+console.log(test.entries());
